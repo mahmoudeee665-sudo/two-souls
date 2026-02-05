@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+  />
+  <title>Two Souls</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" preload="auto">
+  <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🎵 Floating Music Button -->
+<button id="musicToggle" class="music-btn hidden" aria-label="music toggle">
+  <i style="color: #e64b7c;" class="fa-solid fa-pause"></i>
+</button>
+
+
+
+<body>
+
+<!-- 🔐 PASSWORD SCREEN -->
+<div id="lockScreen" class="lock-screen">
+  <div class="lock-card">
+    <i class="fa-solid fa-lock fa-2xl" style="color: #e64b7c;"></i>
+    <h3>محتوى خاص</h3>
+    <p>من فضلك أدخل كلمة المرور للمتابعة</p>
+
+    <input
+      type="password"
+      id="passwordInput"
+      placeholder="كلمة المرور"
+      inputmode="text"
+      autocomplete="off"
+      autocapitalize="off"
+      autocorrect="off"
+    />
+
+    <button type="button" onclick="checkPassword()">دخول</button>
+  </div>
+</div>
+
+<!-- 🌍 MAIN CONTENT -->
+<div id="content" class="hidden">
+
+  <!-- ⏳ TIMELINE -->
+  <section class="timeline">
+    <div class="timeline-card">
+<span class="heart">
+<i class="fa-solid fa-heart fa-2xl" style="color: #e64b7c;"></i></span>
+      <h4>OUR ETERNAL TIMELINE</h4>
+
+      <div class="time-grid">
+        <div><span id="years">0</span><small>سنة</small></div>
+        <div><span id="months">0</span><small>شهر</small></div>
+        <div><span id="days">0</span><small>يوم</small></div>
+        <div><span id="hours">0</span><small>ساعة</small></div>
+        <div><span id="minutes">0</span><small>دقيقة</small></div>
+        <div class="highlight"><span id="seconds">0</span><small>ثانية</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🖼️ MEMORIES -->
+  <section class="memories">
+
+<div class="memory-card">
+  <img src="img/1.jpg" alt="">
+
+  <div class="memory-info">
+    <span class="date">1-11-2025</span>
+    <h3>أول صورة لينا</h3>
+    <p>
+      أول صورة جمعتنا مع بعض، كانت بداية حكاية جميلة،
+      لحظة بسيطة بس مليانة إحساس وذكريات هتفضل عايشة جوانا دايمًا.
+    </p>
+    </div>
+</div>
+
+
+<div class="memory-card">
+  <img src="img/2.jpg" alt="">
+
+  <div class="memory-info">
+    <span class="date">25-11-2025</span>
+    <h3>أحلى يوم لينا</h3>
+    <p>
+      اليوم ده كان من أحلى الأيام اللي عدّت علينا،
+      اتطمنّا فيه لبعض قوي وحسّينا قد إيه وجودنا مع بعض مريح.
+      وكان مميز أكتر لأنه كان يوم عيد ميلادك.
+    </p>  </div>
+</div>
+
+<div class="memory-card">
+  <img src="img/3.jpg" alt="">
+
+  <div class="memory-info">
+    <span class="date">27-1-2026</span>
+    <h3>يوم مميز بالنسبالي</h3>
+    <p>
+      اليوم ده كان مميز بالنسبالي جدًا،
+      كنت مبسوط من قلبي ومن غير أي سبب غير إننا كنا مع بعض.
+    </p>
+    </div>
+</div>
+
+
+
+<div class="memory-card video-card">
+  <video
+    id="memoriesVideo"
+    src="video/memories.mp4"
+    poster="img/videobg.jpeg"
+    preload="metadata"
+    muted
+    playsinline
+  ></video>
+
+  <!-- Play Button -->
+  <button class="video-play-btn" aria-label="play video">
+    <i class="fa-solid fa-play"></i>
+  </button>
+
+  <div class="memory-info">
+    <span class="date">
+      <i class="fa-solid fa-infinity fa-xl"></i>
+    </span>
+    <h3>ذكريات عمري ما هنساها</h3>
+    <p>
+      شوية لحظات متجمعة في فيديو،
+      كل لقطة فيهم بتحكي ذكرى،
+      وكل ذكرى ليها مكان خاص في قلبي.
+    </p>
+  </div>
+</div>
+
+
+
+  </section>
+
+  <!-- 💌 FINAL MESSAGE -->
+  <section class="final">
+    <div class="final-card">
+      <span><i class="fa-regular fa-star fa-2xl" style="color: #e64b7c;"></i></span>
+<p>
+معاك حسّيت يعني إيه حب حقيقي،  
+راحة واطمئنان من غير مجهود.  
+بحبك، ودايما مع بعض طول العمر 
+</p>
+
+      <strong>Mahmoud & Waad</strong>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
